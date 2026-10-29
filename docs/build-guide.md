@@ -17,6 +17,17 @@ The resulting tree is a packaging input, not a flashable image. A future image
 builder must record the kernel commit, defconfig, DTB/DTBO inputs, rootfs
 source revisions, and SHA-256 checksums.
 
+The Android hybrid package can be assembled without a device:
+
+```sh
+make magisk-package
+sha256sum build/nexus-hybrid.zip
+```
+
+The archive contains no configuration, key, firmware, boot image, or
+proprietary blob. It is not hardware-tested and must not be installed without
+the safety and approval process in `docs/recovery-guide.md`.
+
 The read-only device inventory helper is:
 
 ```sh

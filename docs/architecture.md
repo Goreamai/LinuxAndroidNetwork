@@ -40,3 +40,8 @@ Use a dedicated non-root tunnel account, a pinned host key, a private key with
 mode 0600, `ExitOnForwardFailure`, and a restricted remote `authorized_keys`
 entry. The management plane is SSH-first; no unauthenticated web service is
 included.
+
+For the current hardware baseline, the deployable architecture is hybrid:
+Android remains responsible for Wi-Fi/WCN initialization, while NEXUS owns
+the outbound tunnel supervision and diagnostics. The standalone Linux rootfs
+remains a separate bring-up target until the vendor Wi-Fi contract is proven.

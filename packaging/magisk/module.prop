@@ -1,0 +1,6 @@
+id=nexus-hybrid
+name=NEXUS Android Hybrid
+version=0.1.0
+versionCode=1
+author=NEXUS contributors
+description=Outbound tunnel supervisor for SM-T285 Android baseline

@@ -28,6 +28,7 @@ Sources:
 * [Build guide](https://github.com/lineage-gtexslte/build_guide)
 * [Recovery device tree](https://github.com/SHRP-Devices/device_samsung_gtexslte)
 * [postmarketOS device index](https://wiki.postmarketos.org/wiki/Devices)
+* [Spreadtrum vendor source](https://github.com/jedld/vendor_sprd_9830)
 
 ## What is not established yet
 

@@ -18,6 +18,8 @@ experiment.
 | ARMHF userspace layout and service configuration | Implemented and host-tested |
 | Network diagnostics and configuration validation | Implemented and host-tested |
 | Reverse SSH tunnel supervisor | Implemented; integration-testable with a local relay |
+| Android hybrid package template | Implemented and host-built; not device-tested |
+| Exact Wi-Fi vendor dependency audit | Documented from source and ADB evidence |
 | Device-specific Linux image | Not built: kernel/rootfs integration is hardware-dependent |
 | Native Linux boot, Wi-Fi, LTE, and tunnel on SM-T285 | Not hardware-tested |
 

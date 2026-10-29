@@ -3,7 +3,7 @@ SHELL := /bin/sh
 ROOTFS := build/rootfs
 PREFIX := $(ROOTFS)/usr/lib/nexus
 
-.PHONY: all test stage clean
+.PHONY: all test stage magisk-package clean
 
 all: test
 
@@ -20,6 +20,9 @@ stage:
 	cp packaging/init.d/nexus "$(ROOTFS)/etc/init.d/nexus"
 	chmod 0755 "$(PREFIX)"/*.sh "$(ROOTFS)/etc/init.d/nexus"
 	printf '%s\n' "staged $(ROOTFS)"
+
+magisk-package:
+	sh packaging/magisk/build.sh
 
 clean:
 	rm -rf build
