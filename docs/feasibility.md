@@ -42,6 +42,14 @@ WireGuard, modern nftables, hardware watchdogs, suspend/resume, or a usable
 Linux userspace. The first target should therefore be a wired/ADB-assisted
 bring-up and read-only diagnostics, followed by Wi-Fi and power validation.
 
+The physical audit now confirms the exact partition names and locations:
+`KERNEL` is `mmcblk0p20`, `RECOVERY` is `mmcblk0p21`, `SYSTEM` is
+`mmcblk0p25`, and `userdata` is `mmcblk0p27`. It also confirms the vendor
+`sprdwl` module and SC2331 Wi-Fi command path. Wi-Fi was observed working in
+Android, but no `wlan0` interface was present in the captured state, so Linux
+userspace Wi-Fi integration remains unproven. See
+[hardware-audit.md](hardware-audit.md).
+
 ## Architecture comparison
 
 | Option | Assessment |

@@ -21,3 +21,7 @@ Save output privately, review it for identifiers, and record only the
 technical facts needed by `docs/feasibility.md`. Any future flash proposal
 must include provenance, target partition, checksum, backup, recovery path,
 failure modes, and an explicit approval request.
+
+The first audit confirmed that `KERNEL` is `mmcblk0p20` and `RECOVERY` is
+`mmcblk0p21`. These names are documentation only; do not write either
+partition during development.
