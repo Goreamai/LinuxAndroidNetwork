@@ -1,0 +1,21 @@
+#!/bin/sh
+case "${1:-start}" in
+start)
+    /usr/lib/nexus/supervise.sh >/dev/null 2>&1 &
+    echo $! >/run/nexus.pid 2>/dev/null || :
+    ;;
+stop)
+    if [ -r /run/nexus.pid ]; then
+        kill "$(cat /run/nexus.pid)" 2>/dev/null || :
+        rm -f /run/nexus.pid
+    fi
+    ;;
+restart)
+    "$0" stop
+    "$0" start
+    ;;
+*)
+    echo "usage: $0 {start|stop|restart}" >&2
+    exit 2
+    ;;
+esac
